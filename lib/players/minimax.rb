@@ -76,6 +76,7 @@ class Players
           if score > bestScore
             bestScore = score
           end
+          bestScore 
         end
       elsif isMaximizing == false
         bestScore = +Float::INFINITY
@@ -89,7 +90,7 @@ class Players
         end
       end
 
-      bestScore 
+      bestScore
     end
 
   end
