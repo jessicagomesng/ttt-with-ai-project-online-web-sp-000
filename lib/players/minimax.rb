@@ -56,7 +56,7 @@ class Players
           board.cells[move] = ""
           if score[0] > bestScore
             bestScore = score[0]
-            bestMove = move 
+            bestMove = move
           end
         end
       elsif isMaximizing == false
@@ -67,10 +67,10 @@ class Players
           board.cells[move] = ""
           if score[0] < bestScore
             bestScore = score[0]
-            bestMove = move 
+            bestMove = move
           end
         end
-        bestScore
+        bestMove
       end
     end
 
