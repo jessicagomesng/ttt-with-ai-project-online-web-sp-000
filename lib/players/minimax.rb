@@ -74,8 +74,7 @@ class Players
           score = minimax(board, depth - 1, false);
           board.cells[move] = ""
           if score > bestScore
-            best[1] = score
-            best[0] = move
+            bestScore = score 
           end
         end
       elsif isMaximizing == false
