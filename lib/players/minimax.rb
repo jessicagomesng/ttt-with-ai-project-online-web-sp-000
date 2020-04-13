@@ -58,6 +58,7 @@ class Players
           board.cells[move] = ""
           if score[0] > bestScore
             bestScore = score[0]
+            binding.pry
           end
         end
       elsif isMaximizing == false
