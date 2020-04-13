@@ -75,7 +75,7 @@ class Players
           board.cells[move] = ""
           if score > bestScore
             bestScore = score
-          end 
+          end
         end
       elsif isMaximizing == false
         bestScore = +Float::INFINITY
@@ -87,6 +87,7 @@ class Players
             bestScore = score
           end
         end
+        bestScore 
       end
 
       bestScore
