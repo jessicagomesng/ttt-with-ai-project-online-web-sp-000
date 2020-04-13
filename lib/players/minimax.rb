@@ -56,6 +56,7 @@ class Players
           board.cells[move] = ""
           if score[0] > bestScore
             bestScore = score[0]
+            binding.pry
             bestMove = move
           end
         end
