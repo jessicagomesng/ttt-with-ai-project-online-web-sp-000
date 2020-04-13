@@ -59,9 +59,9 @@ class Players
         end
         move + 1
       end
-    end 
+    end
 
-    def minimax(board, depth = 0, isMaximizing)
+    def minimax(board, depth, isMaximizing)
       #rewrite over in terms of the board
       if depth.zero? || board.over?
         return [-1, final_scores(board)]
