@@ -58,7 +58,8 @@ class Players
           move = move
         end
         move + 1
-      end 
+      end
+    end 
 
     def minimax(board, depth = 0, isMaximizing)
       #rewrite over in terms of the board
