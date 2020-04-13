@@ -71,7 +71,6 @@ class Players
             bestMove = move
           end
         end
-        return bestMove
       end
     end
 
