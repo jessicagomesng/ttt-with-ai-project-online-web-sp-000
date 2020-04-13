@@ -63,6 +63,7 @@ class Game
        board.update(input, current_player)
        board.display
      else
+       puts "Please enter a valid number between 1-9:"
        input = current_player.move(board)
      end
    end
