@@ -59,7 +59,6 @@ class Game
   def turn
      puts "Player #{current_player.token}, please enter a number between 1-9:"
      input = current_player.move(board)
-     binding.pry 
      if board.valid_move?(input) == true
        board.update(input, current_player)
        board.display
