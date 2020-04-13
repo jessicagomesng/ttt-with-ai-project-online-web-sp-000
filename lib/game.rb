@@ -107,6 +107,7 @@ class Game
          player_2 = Players::Human.new("O")
          game = Game.new(player_1, player_2, board = Board.new("computer"))
          game.play
+         binding.pry 
        end
      end
 
