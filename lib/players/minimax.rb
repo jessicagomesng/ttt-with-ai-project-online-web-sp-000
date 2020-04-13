@@ -74,7 +74,7 @@ class Players
           score = minimax(board, depth - 1, false)
           board.cells[move] = ""
           if score[0] > bestScore
-            bestScore = score
+            bestScore = score[0]
           end
         end
       elsif isMaximizing == false
@@ -84,7 +84,7 @@ class Players
           score = minimax(board, depth - 1, true)
           board.cells[move] = ""
           if score[0] < bestScore
-            bestScore = score
+            bestScore = score[0]
           end
         end
         bestScore.join
