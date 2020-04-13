@@ -68,7 +68,6 @@ class Players
           score = minimax(board, depth - 1, true)
           board.cells[move] = ""
           if score[0] < bestScore
-            binding.pry
             bestScore = score[0]
             binding.pry
           end
