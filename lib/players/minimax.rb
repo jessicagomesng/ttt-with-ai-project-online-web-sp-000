@@ -58,7 +58,7 @@ class Players
         bestScore = -Float::INFINITY
         board.available_spots.each do |move|
           board.cells[move] = self.token
-          score = minimax(board, depth - 1, false);
+          array = minimax(board, depth - 1, false);
           board.cells[move] = ""
           if score[1] > bestScore
             binding.pry
