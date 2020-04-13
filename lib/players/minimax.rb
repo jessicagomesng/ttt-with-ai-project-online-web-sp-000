@@ -4,9 +4,7 @@ class Players
   class ComputerAI < Player
 
     def move(board)
-      depth = board.available_spots.size
-      move = minimax(board, depth, true)[0] + 1
-      move.to_s
+      best_move(board).to_s
     end
 
     def final_scores(board)
