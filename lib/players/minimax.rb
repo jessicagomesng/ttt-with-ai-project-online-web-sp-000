@@ -47,6 +47,7 @@ class Players
     end
 
     def best_move(board)
+      depth = board.available_spots.size
       bestScore = -Float::INFINITY
       move = ""
       board.available_spots.each do |move|
