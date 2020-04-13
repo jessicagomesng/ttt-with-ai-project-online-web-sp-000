@@ -72,12 +72,12 @@ class Players
           end
         end
         binding.pry
-        bestMove
+        bestMove + 1
       end
     end
 
     def move(board)
-      depth = board.available_spots.size 
+      depth = board.available_spots.size
       minimax(board, depth, true)
     end
 
