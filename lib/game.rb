@@ -63,7 +63,7 @@ class Game
        board.update(input, current_player)
        board.display
      else
-       turn
+       input = current_player.move(board)
      end
    end
 
