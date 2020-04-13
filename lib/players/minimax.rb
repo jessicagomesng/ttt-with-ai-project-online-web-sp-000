@@ -82,3 +82,5 @@ class Players
 
   end
 end
+
+#fix this -- currently it's returning the value of the scores. If it is an intermediate state, it appears to just be assigning it nil.  
