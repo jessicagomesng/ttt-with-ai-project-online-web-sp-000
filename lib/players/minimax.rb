@@ -67,7 +67,6 @@ class Players
         return final_scores(board)
       end
 
-      best = []
 
       if isMaximizing == true
         bestScore = -Float::INFINITY
