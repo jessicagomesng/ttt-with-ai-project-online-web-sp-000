@@ -71,7 +71,7 @@ class Players
     end
 
     def move(board)
-      best_move(board).to_s
+      best_move(board) + 1.to_s
     end
 
   end
