@@ -4,7 +4,7 @@ class Players
   class ComputerAI < Player
 
     def move(board)
-      best_move(board).to_s
+      best_move(board)[0].to_s
     end
 
     def final_scores(board)
