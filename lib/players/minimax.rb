@@ -73,7 +73,7 @@ class Players
           board.cells[move] = self.token
           score = minimax(board, depth - 1, false)
           board.cells[move] = ""
-          if score > bestScore
+          if score[0] > bestScore
             bestScore = score
           end
         end
