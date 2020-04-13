@@ -70,6 +70,7 @@ class Players
             bestMove = move
           end
         end
+        binding.pry
         bestMove
       end
     end
