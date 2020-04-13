@@ -5,7 +5,6 @@ class Players
 
     def move(board)
       best_move(board)[0].to_s
-      binding.pry
     end
 
     def final_scores(board)
