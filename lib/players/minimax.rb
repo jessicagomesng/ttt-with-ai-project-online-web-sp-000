@@ -87,10 +87,9 @@ class Players
             bestScore = score
           end
         end
-        bestScore 
+        bestScore
       end
 
-      bestScore
     end
 
   end
