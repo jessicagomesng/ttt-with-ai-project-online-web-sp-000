@@ -51,7 +51,12 @@ class Players
       move = ""
       board.available_spots.each do |move|
         board.cells[move] = self.token
-        score = minimax(board, 0, false)
+        score = minimax(board, 0, false);
+        board.cells[move] = ""
+        if score > bestScore
+          bestScore = score
+          move = move
+        end 
 
     def minimax(board, depth = 0, isMaximizing)
       #rewrite over in terms of the board
