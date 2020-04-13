@@ -1,3 +1,5 @@
+require 'pry'
+
 class Players
   class ComputerAI < Player
 
