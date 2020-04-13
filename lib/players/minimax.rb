@@ -40,7 +40,7 @@ class Players
           bestScore = score
           move = move
         end
-        move + 1
+        move
       end
     end
 
