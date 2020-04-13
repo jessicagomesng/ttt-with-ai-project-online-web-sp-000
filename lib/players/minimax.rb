@@ -36,6 +36,7 @@ class Players
           bestScore = score
           move = move
         end
+        binding.pry
         move
       end
     end
@@ -71,7 +72,7 @@ class Players
     end
 
     def move(board)
-      move = best_move(board) 
+      move = best_move(board)
       move.to_s
     end
 
