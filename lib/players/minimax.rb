@@ -40,6 +40,7 @@ class Players
           bestScore = score
           move = move
         end
+        binding.pry 
         move
       end
     end
