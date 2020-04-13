@@ -1,8 +1,9 @@
 class Board
 
-  attr_accessor :cells
+  attr_accessor :cells, :first_player
 
-  def initialize
+  def initialize(first_player)
+    @first_player = first_player
     @cells = Array.new(9, " ")
   end
 
@@ -48,27 +49,56 @@ class Board
     cells[index] = player.token
   end
 
-  #def cells_with_index
-    #iterate over the cells array
-    #if a cell is unoccupied, then change the value of that cell to the index itself.
-  #  cell_array = cells.each_with_index.collect do |cell, index|
-  #    if cell == "" || cell == " "
-  #      cell = index
-  #    elsif cell == "X" || cell == "O"
-  #      cell
-  #    end
-  #  end
-  #  cell_array
-  #end
-
   def available_spots
     available_spots = []
     cells.each_with_index do |cell, index|
       if cell == " " || cell == ""
-        available_spots << index + 1
+        available_spots << index
       end
     end
     available_spots
+  end
+
+  def occupied_spots
+    occupied_spots = []
+    cells.each_with_index do |cell, index|
+      if cell == "X" || cell == "O"
+        occupied_spots << index
+      end
+    end
+    occupied_spots
+  end
+
+  def won?
+    win_combinations = [[0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [6,4,2]]
+
+    win_combinations.find do |combination|
+      position_1 = combination[0]
+      position_2 = combination[1]
+      position_3 = combination[2]
+      cells[position_1] == cells[position_2] &&
+      [position_2] == cells[position_3] &&
+      taken?(position_1 + 1)
+    end
+  end
+
+  def draw?
+    !won? && full?
+  end
+
+  def over?
+    won? || draw?
+  end
+
+  def winner
+    cells[won?[0]] if won?
   end
 
 end
