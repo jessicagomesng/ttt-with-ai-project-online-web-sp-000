@@ -59,6 +59,7 @@ class Players
           score = minimax(board, depth - 1, false);
           board.cells[move] = ""
           if score[1] > bestScore
+            binding.pry
             best[1] = score
             best[0] = move
           end
