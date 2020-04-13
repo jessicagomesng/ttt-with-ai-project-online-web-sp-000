@@ -2,12 +2,7 @@ require 'pry'
 
 class Players
   class ComputerAI < Player
-
-    def move(board)
-      binding.pry
-      best_move(board).to_s
-    end
-
+    
     def final_scores(board)
       if board.winner == self.token
         +1
