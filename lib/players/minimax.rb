@@ -75,8 +75,7 @@ class Players
     end
 
     def move(board)
-      move = best_move(board)
-      move.to_s
+      minimax(board, depth, true)
     end
 
   end
