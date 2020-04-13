@@ -70,6 +70,7 @@ class Players
           if score[0] < bestScore
             binding.pry
             bestScore = score[0]
+            binding.pry
           end
         end
         bestScore
