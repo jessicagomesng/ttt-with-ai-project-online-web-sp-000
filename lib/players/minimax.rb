@@ -46,6 +46,13 @@ class Players
       token == self.token ? get_opponent_piece(board, token) : self.token
     end
 
+    def best_move(board)
+      bestScore = -Float::INFINITY 
+      move = ""
+      board.available_spots.each do |move|
+        board.cells[move] = self.token 
+        score = minimax(board, 0, false)
+
     def minimax(board, depth = 0, isMaximizing)
       #rewrite over in terms of the board
       if depth.zero? || board.over?
