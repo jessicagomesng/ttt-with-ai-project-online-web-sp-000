@@ -61,6 +61,7 @@ class Players
         end
       elsif isMaximizing == false
         bestScore = +Float::INFINITY
+        bestMove = ""
         board.available_spots.each do |move|
           board.cells[move] = get_opponent_piece(board, token)
           score = minimax(board, depth - 1, true)
