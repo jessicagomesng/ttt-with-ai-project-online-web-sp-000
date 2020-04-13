@@ -62,7 +62,6 @@ class Players
           score = array[1]
           board.cells[move] = ""
           if score > bestScore
-            binding.pry
             best[1] = score
             best[0] = move
           end
