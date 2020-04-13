@@ -4,8 +4,8 @@ class Players
   class ComputerAI < Player
 
     def move(board)
-      binding.pry 
-      best_move(board)[0].to_s
+      binding.pry
+      best_move(board).to_s
     end
 
     def final_scores(board)
