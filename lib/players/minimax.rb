@@ -89,7 +89,6 @@ class Players
         end
         bestScore
       end
-
     end
 
   end
