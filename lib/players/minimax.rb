@@ -70,7 +70,7 @@ class Players
             bestMove = move
           end
         end
-        bestMove + 1
+        return bestMove + 1
       end
     end
 
