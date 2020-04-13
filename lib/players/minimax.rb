@@ -52,7 +52,7 @@ class Players
 
       best = []
 
-      if isMaximizing
+      if isMaximizing == true 
         bestScore = -Float::INFINITY
         board.available_spots.each do |move|
           board.cells[move] = self.token
