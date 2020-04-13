@@ -70,12 +70,10 @@ class Players
       end
     end
 
-
     def move(board)
       binding.pry
       best_move(board).to_s
     end
-
-
+    
   end
 end
