@@ -47,10 +47,10 @@ class Players
     end
 
     def best_move(board)
-      bestScore = -Float::INFINITY 
+      bestScore = -Float::INFINITY
       move = ""
       board.available_spots.each do |move|
-        board.cells[move] = self.token 
+        board.cells[move] = self.token
         score = minimax(board, 0, false)
 
     def minimax(board, depth = 0, isMaximizing)
