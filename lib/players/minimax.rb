@@ -41,7 +41,7 @@ class Players
           move = move
         end
         binding.pry 
-        move
+        move + 1
       end
     end
 
