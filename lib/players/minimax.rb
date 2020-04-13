@@ -4,6 +4,7 @@ class Players
   class ComputerAI < Player
 
     def move(board)
+      binding.pry 
       best_move(board)[0].to_s
     end
 
