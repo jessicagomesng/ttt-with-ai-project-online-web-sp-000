@@ -87,7 +87,7 @@ class Players
             bestScore = score[0]
           end
         end
-        bestScore.join
+        bestScore
       end
     end
 
