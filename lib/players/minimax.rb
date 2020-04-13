@@ -78,7 +78,7 @@ class Players
 
     def move(board)
       depth = board.available_spots.size
-      minimax(board, depth, true)
+      minimax(board, depth, true).to_s
     end
 
   end
