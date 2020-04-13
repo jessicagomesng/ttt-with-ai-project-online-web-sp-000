@@ -24,22 +24,22 @@ class Players
       token == self.token ? get_opponent_piece(board, token) : self.token
     end
 
-    def best_move(board)
-      depth = board.available_spots.size
-      bestScore = -Float::INFINITY
-      move = ""
-      board.available_spots.each do |move|
-        board.cells[move] = self.token
-        score = minimax(board, depth, false);
-        board.cells[move] = ""
-        if score > bestScore
-          bestScore = score
-          move = move
-        end
-        binding.pry
-        move
-      end
-    end
+  #  def best_move(board)
+  #    depth = board.available_spots.size
+  #    bestScore = -Float::INFINITY
+  #    move = ""
+  #    board.available_spots.each do |move|
+  #      board.cells[move] = self.token
+  #      score = minimax(board, depth, false);
+  #      board.cells[move] = ""
+  #      if score > bestScore
+  #        bestScore = score
+  #        move = move
+  #      end
+  #      binding.pry
+  #      move
+  #    end
+  #  end
 
     def minimax(board, depth, isMaximizing)
       #rewrite over in terms of the board
