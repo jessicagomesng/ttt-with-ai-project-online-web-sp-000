@@ -52,7 +52,7 @@ class Players
         bestMove = ""
         board.available_spots.collect do |move|
           board.cells[move] = self.token
-          score = minimax(board, depth - 1, false)
+          score = minimax(board, depth + 1, false)
           board.cells[move] = ""
           if score[0] > bestScore
             bestScore = score[0]
