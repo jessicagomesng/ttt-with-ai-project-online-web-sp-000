@@ -43,7 +43,7 @@ class Players
 
     def minimax(board, depth, isMaximizing)
       #rewrite over in terms of the board
-      if depth.zero? || board.over?
+      if board.over?
         return final_scores(board)
       end
 
