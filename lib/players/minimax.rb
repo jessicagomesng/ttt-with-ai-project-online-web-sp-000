@@ -17,22 +17,6 @@ class Players
       end
     end
 
-    def whose_move(board)
-      if board.first_player = "computer"
-        if board.turn_count.even?
-          return "computer"
-        elsif board.turn_count.odd?
-          return "human"
-        end
-      elsif board.first_player = "human"
-        if board.turn_count.even?
-          return "human"
-        elsif board.turn_count.odd?
-          return "computer"
-        end
-      end
-    end
-
     def get_opponent_piece(board, token)
       #check the board at each occupied spot
       #return the first occupied spot where the token isn't yours
