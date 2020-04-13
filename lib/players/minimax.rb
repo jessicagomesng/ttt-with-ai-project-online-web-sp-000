@@ -85,12 +85,11 @@ class Players
           board.cells[move] = ""
           if score < bestScore
             bestScore = score
-            best[0] = move
           end
         end
       end
 
-      best
+      bestScore 
     end
 
   end
