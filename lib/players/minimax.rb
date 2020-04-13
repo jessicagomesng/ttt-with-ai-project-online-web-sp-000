@@ -56,7 +56,9 @@ class Players
         if score > bestScore
           bestScore = score
           move = move
-        end 
+        end
+        move + 1
+      end 
 
     def minimax(board, depth = 0, isMaximizing)
       #rewrite over in terms of the board
