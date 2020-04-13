@@ -71,7 +71,7 @@ class Players
         bestScore = -Float::INFINITY
         board.available_spots.each do |move|
           board.cells[move] = self.token
-          score = minimax(board, depth - 1, false);
+          score = minimax(board, depth - 1, false)
           board.cells[move] = ""
           if score > bestScore
             bestScore = score
@@ -81,7 +81,7 @@ class Players
         bestScore = +Float::INFINITY
         board.available_spots.each do |move|
           board.cells[move] = get_opponent_piece(board, token)
-          score = minimax(board, depth - 1, true);
+          score = minimax(board, depth - 1, true)
           board.cells[move] = ""
           if score < bestScore
             bestScore = score
