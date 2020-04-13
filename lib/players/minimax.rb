@@ -64,7 +64,7 @@ class Players
         bestMove =
         board.available_spots.collect do |move|
           board.cells[move] = get_opponent_piece(board, token)
-          score = minimax(board, depth - 1, true)
+          score = minimax(board, depth + 1, true)
           board.cells[move] = ""
           if score[0] < bestScore
             bestScore = score[0]
