@@ -50,7 +50,7 @@ class Players
       if isMaximizing == true
         bestScore = -Float::INFINITY
         bestMove = ""
-        board.available_spots.each do |move|
+        board.available_spots.collect do |move|
           board.cells[move] = self.token
           score = minimax(board, depth - 1, false)
           board.cells[move] = ""
